@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+
+a{
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+img{
+    cursor: pointer;
+}
+
+.flex-div{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    position: fixed;
+    width: 100vw;
+    padding: 10px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-right img{
+    width: 25px;
+    margin-right: 25px;
+}
+
+.nav-right .user-icon{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 0;
+}
+
+.nav-left .menu-icon{
+    width: 22px;
+    margin-right: 25px;
+}
+
+.nav-left .logo{
+    width: 130px;
+}
+
+.nav-center .mic-icon{
+    width: 16px;
+}
+
+.nav-center .search-box{
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius: 25px;
+}
+
+.nav-center .search-box input{
+    width: 400px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+.nav-center .search-box img{
+    width: 15px;
+}
+
+/* _________Sidebar__________ */
+
+.sidebar{
+    background: rgb(245, 220, 220);
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-left: 2%;
+    padding-top: 80px;
+    
+}
+
+
+
+.shortcut-link a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: black;
+} 
+
+.shortcut-link a img{
+    width: 25px;
+    margin-right: 20px;
+}
+
+.shortcut-link a p{
+    margin-bottom: 0px;
+}
+
+.sidebar hr{
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    width: 85%;
+}
+
+.small-sidebar{
+    width: 5%;
+}
+
+.small-sidebar a p{
+    display: none;
+}
+
+.small-sidebar hr{
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+/* ___________main____________ */
+
+.section{
+    background: #f9f9f9;
+    padding-left: 17%;
+    padding-right: 2%;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.large-section{
+    padding-left: 7%;
+}
+
+.list-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 15px;
+}  
+
+.vid-list .thumbnail{
+    width: 100%;
+    border-radius: 5%;
+}
+
+.vid-list .flex-div{
+    align-items: flex-start;
+    margin-top: 7px;
+}
+
+.vid-list .flex-div img{
+    width: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.video-info{
+    color: #5a5a5a;
+    font-style: 13px;
+}
+
+.video-info a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+/* Tablet */
+@media (max-width : 1100px){
+    .menu-icon{
+        display: none;
+    }
+    .sidebar{
+        width: 85px;
+        padding-left: 1px;
+    }
+
+     .shortcut-link a{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .shortcut-link a img{
+        width: 45px;
+        margin-left: 18px;
+        padding-left: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .shortcut-link p{
+        font-size: 10px;
+        
+    }
+
+    .section, .large-section{
+        padding-left: 90px;
+        padding-right: 5px;
+    }
+
+    .nav-right img{
+        width: 20px;
+    }
+
+    .nav-right .user-icon{
+        width: 30px;
+    }
+
+    .nav-center .search-box input{
+        width: 30vw;
+    }
+
+    .nav-center .mic-icon{
+        display: none;
+    }
+
+    .nav-left .logo{
+        width:  120px;
+    }
+
+    .list-container{
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    }
+
+}
+
+/* Mobile Phone */
+@media (max-width: 800px){
+    .menu-icon{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+    .section, .large-section{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .nav-right img{
+        display: none;
+    }
+
+    .nav-right .user-icon{
+        display: block;
+        width: 30px;
+    }
+
+    .nav-center .search-box input{
+        width: 20vw;
+    }
+
+    .nav-center .mic-icon{
+        display: none;
+    }
+    .nav-left .logo{
+        width: 90px ;
+    }
+}
